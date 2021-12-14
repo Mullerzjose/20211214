@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Iva</title>
+</head>
+<body>
+    <h3>Calcular IVA</h3>
+    <p>Ingrese Neto: <input type="text" id="v1" name="n1"></p>
+    <p>Ingrese % IVA :  <input type="number" name="n2" min="1" max="100" id="v2"></p>
+    <p id="op"></p>
+
+    <button onclick="porcentaje();">Calcular Valor Total</button><br>
+    <p>Valor IVA:  <input type="text" name="res" id="res"></p>
+    <p>Valor Bruto:  <input type="text" name="bru" id="bru"></p>    
+    
+    <script type="text/javascript">
+
+ 	    function porcentaje(){
+
+ 		    let v1=document.getElementById('v1').value;
+            let v2=document.getElementById('v2').value;
+            let vv1=parseInt(v1,10);
+            let vv2=parseInt(v2,10);
+            let res=(vv1*vv2)/100
+            document.getElementById('res').value=res;
+            document.getElementById('op').innerHTML;
+            let bru=(vv1+res)
+            document.getElementById('bru').value=bru;
+        
+ 	    }    
+    </script>
+</body>
+</html>
