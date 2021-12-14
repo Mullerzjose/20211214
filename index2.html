@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>Tarea As</title>
+</head>
+<body>
+    <h3>Porcentajes</h3>
+    <p>Ingrese Valor :  <input type="text" name="n1" id="v1"></p>
+    <p>Ingrese Porcentaje :  <input type="number" name="n2" min="1" max="100" id="v2"></p>
+ 	<p id="op"></p>
+
+    <button onclick="porcentaje();">Calcular Porcentaje</button><br>
+    <p>Resultado:  <input type="text" name="res" id="res"></p>
+        
+    <script type="text/javascript">
+
+        function porcentaje(){
+
+            let v1=document.getElementById('v1').value;
+            let v2=document.getElementById('v2').value;
+            let vv1=parseInt(v1,10);
+            let vv2=parseInt(v2,10);
+            let res=(vv1*vv2)/100
+            document.getElementById('res').value=res;
+            document.getElementById('op').innerHTML;
+        
+        }
+    </script>
+</body>
+</html>
